@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>hello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+		   $("#a").click(function(){
+		   		//显示效果
+		     	//$("div").show();
+		     	//向下滑动
+		      $("div").slideDown(3000);
+		      //$("div").fadeIn(3000);
+		   })
+		   $("#b").click(function(){
+		      //$("div").hide();
+		      //向上滑动
+		      $("div").slideUp(3000);
+		      //$("div").fadeOut(3000);
+		   })
+		   
+		})
+	
+	</script>
+  </head>
+  
+  <body>
+    
+    <input id="a" type="button" value="显示">
+    <input id="b" type="button" value="隐藏">
+     <div><img src="1.jpg" width="200" height="190"/></div>
+  </body>
+</html>

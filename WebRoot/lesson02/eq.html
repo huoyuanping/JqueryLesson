@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>hello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	
+	<script type="text/javascript">
+	//dom元素初始化完成之后才会调用
+	$(function(){
+		var jquery=$("input");
+		//eq是获取 选择器中的多个jquery对象中  索引指定的那个
+		alert(jquery.eq(0).val());
+		//get返回的是dom对象
+		alert(jquery.get(1).value());
+	});
+		
+	</script>
+  </head>
+  
+  <body>
+   <input type="text" id="username" value="嘿嘿"/>
+   <input type="password" id="password" value="123456"/>
+  </body>
+</html>

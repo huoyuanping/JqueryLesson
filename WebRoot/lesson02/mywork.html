@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>hello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+  	 		$(function(){
+			$("[type='button1']").click(function(){			
+				$("#dan3").attr("selected",true);			
+			});
+			
+			$("[type='button2']").click(function(){
+				$("#duo2").attr("selected",true);
+				$("#duo5").attr("selected",true);
+			});
+			
+			
+			$("[type='button3']").click(function(){
+				  $("[type='checkbox']").eq(1).attr('checked', true);    
+				  $("[type='checkbox']").eq(3).attr('checked', true);    
+			});
+			
+			$("[type='button4']").click(function(){    
+		          $("[type='radio']").eq(1).attr('checked', true);    
+		    });   
+		    
+		    $("[type='button5']").click(function(){   
+				 
+		        alert($("option:selected").text());
+		        
+	        	$.each($(":checkbox:checked"),function(key,value){
+				alert($(value).val());
+				});
+				alert($(":radio:checked").val());
+				
+		    }); 
+		     
+		     
+		    //邮箱
+
+			$(function(){
+			$("[type='text']").eq(0).focusin(function(){
+				$("[type='text']").eq(0).attr("value","");
+			});
+			
+			$("[type='text']").eq(0).focusout(function(){
+				$("[type='text']").eq(0).attr("value","请输入邮箱地址");
+			});
+			
+			$("[type='text']").eq(1).focusin(function(){
+				$("[type='text']").eq(1).attr("value","");
+			});
+			
+			$("[type='text']").eq(1).focusout(function(){
+				$("[type='text']").eq(1).attr("value","请输入邮箱密码");
+			});
+		})
+		});
+  	</script>
+  </head>
+  
+  <body>
+ 		<form action="#">
+  		<input type="text"value="请输入邮箱地址"/><br/>
+	  	<input type="text" value="请输入邮箱密码"/><br/>
+	  	<button>登录</button>
+	  	</br>
+	  	</br>
+	  	</br>
+	  	
+		<input type="checkbox" value="多选1"/>多选1
+	  	<input type="checkbox" value="多选2" />多选2
+	  	<input type="checkbox" value="多选3"/>多选3
+	  	<input type="checkbox" value="多选4"/>多选4<br/>
+	  	<input type="radio" value="单选1"/>单选1
+	  	<input type="radio" value="单选2"/>单选2
+	  	<input type="radio" value="单选3"/>单选3<br/>
+	  	<select >
+	  		<option id="dan1">选择1号</option>
+	  		<option id="dan2">选择2号</option>
+	  		<option id="dan3">选择3号</option>		
+	  	</select>
+	  	
+	  	<select multiple="multiple" size="5">
+	  		<option id="duo1">选择1号</option>
+	  		<option id="duo2">选择2号</option>
+	  		<option id="duo3">选择3号</option>	
+	  		<option id="duo4">选择4号</option>
+	  		<option id="duo5">选择5号</option>		
+	  	</select>
+	  	</br>
+	  	</br>
+	  	
+	  	<button type="button1">使单选下拉框的'选择3号'被选中</button>
+	  	<button type="button2">使多选下拉框中的'选择2号'和'选择5号'被选中</button>
+	  	<button type="button3">使多选框的'多选2'和'多选4'被选中</button>
+	  	<button type="button4">使单选框的'单选2'被选中</button>
+	  	<button type="button5">打印已经被选中的值</button>
+  	</form> 	
+  </body>
+</html>

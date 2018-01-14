@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>hello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	
+	<script type="text/javascript">
+
+	//dom元素初始化完成之后才会调用
+	$(function(){
+	//非委派：相同的选择器绑定的事件 后续添加的相同的dom元素 不会绑定该事件
+		/*
+		$("input[name='t']").click(function(){
+			alert('点击了按钮');
+		})
+		*/
+		
+		//事件委派:事件传播
+		$(document).on("click","input[name='t']",function(){
+			alert('点击了按钮');
+		})
+		
+		$("#cre").click(function(){
+			$(document.body).append("<input name='t'  type='button' value='新增按钮'/>");
+		})
+	});
+		
+	</script>
+  </head>
+  
+  <body>
+   <input name="t"  type="button" value="按钮1"/>
+   <input name="t"  type="button" value="按钮2"/>
+   <input id='cre'  type="button" value="新增按钮t"/>
+  </body>
+</html>

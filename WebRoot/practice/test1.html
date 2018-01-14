@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <titlet>test1.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	
+	<script type="text/javascript">
+	
+	//dom元素初始化完成之后才会调用
+	$(function(){
+		//鼠标移到某行上，某行背景变色
+		$("table tr").mouseover(function(){
+			$(this).css("backgroundColor","#FFFACD");
+		});	
+		
+		
+		//鼠标移出某行，某行还原
+		$("table tr").mouseout(function(){
+			$(this).css("backgroundColor","white");
+		});
+		
+		//鼠标移到某图片上，为图片加边框
+		$("img").mouseover(function(){
+			$(this).css("backgroundColor","#FF6347");
+		});
+		
+		//鼠标移出图片，图片还原
+		$("img").mouseout(function(){
+			$(this).css("backgroundColor","white");
+		});
+	});
+		
+	</script>
+  </head>
+  
+  <body>
+  	<table  border="2" align="center" width="80%" id="tableID">
+		<tr>
+			<td>张三</td>
+			<td>男</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<td>李四</td>
+			<td>男</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>王五</td>
+			<td>男</td>
+			<td>26</td>
+		</tr>
+		<tr>
+			<td>周六</td>
+			<td>男</td>
+			<td>28</td>
+		</tr>
+	</table>
+	<hr/>
+	
+	<img height="120px" src="1.jpg" style="position:absolute;left:30%;border-style:dashed;border-color:white"/>
+	<img height="120px" src="2.jpg" style="position:absolute;left:60%;border-style:dashed;border-color:white"/>
+	
+  </body>
+</html>
